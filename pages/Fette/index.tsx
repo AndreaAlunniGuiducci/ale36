@@ -1,14 +1,16 @@
 import {View} from 'react-native';
+import {mainStyles} from '../../mainStyles';
 import {SentenceAnswerRow} from '../../components/SentenceAnswerRow';
-import {nodiDiDire} from '../../utils/game';
-import { mainStyles } from '../../mainStyles';
+import {fette} from '../../utils/game';
+import {styles} from './styles';
 
-export const NodiDiDire = () => {
+export const Fette = () => {
   return (
     <View style={mainStyles.page}>
-      {nodiDiDire.map((item, index) => (
+      {fette.map((item: any, index: number) => (
         <SentenceAnswerRow
           key={index}
+          style={styles.gameRow}
           sentence={item.sentence}
           rigthAnswer={item.answer}
         />

@@ -1,12 +1,11 @@
 import {ScrollView, Text, View} from 'react-native';
 import {LettereInComuneGame} from '../../components/LettereInComuneGame';
-import {styles} from './styles';
-import { CustomModal } from '../../components/Modal';
+import { mainStyles } from '../../mainStyles';
 
 export const LettereInComune = () => {
   return (
     <ScrollView>
-      <View style={styles.lettereInComune}>
+      <View style={mainStyles.page}>
         <LettereInComuneGame />
         <Text></Text>
         <LettereInComuneGame />

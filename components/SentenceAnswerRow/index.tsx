@@ -3,7 +3,7 @@ import {Text, TextInput, View} from 'react-native';
 import {styles} from './styles';
 import {bgColorMain, rigthColor, wrongColor} from '../../mainStyles';
 
-export const NodiDiDireRow = ({sentence, rigthAnswer}: any) => {
+export const SentenceAnswerRow = ({style, sentenceStyle, sentence, answerStyle, rigthAnswer}: any) => {
   const [answer, setAnswer] = useState('');
   const [bgInputColor, setBgInputColor] = useState(bgColorMain);
 
@@ -20,14 +20,14 @@ export const NodiDiDireRow = ({sentence, rigthAnswer}: any) => {
   };
 
   return (
-    <View style={styles.row}>
-      <View style={styles.sentence}>
+    <View style={[styles.row, style]}>
+      <View style={[styles.sentence, sentenceStyle]}>
         <Text>{sentence}</Text>
       </View>
       <TextInput
-        style={[styles.answer, {backgroundColor: bgInputColor}]}
+        style={[styles.answer, {backgroundColor: bgInputColor}, answerStyle]}
         value={answer.toUpperCase()}
-        maxLength={1}
+        // maxLength={1}
         onChangeText={setAnswer}
         onSubmitEditing={checkAnswer}
       />

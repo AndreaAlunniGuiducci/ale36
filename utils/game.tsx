@@ -5,3 +5,16 @@ export const nodiDiDire = [
   {sentence: 'Nè canne nè pesce', answer: 'R'},
   {sentence: 'Fare un colpo do tosta', answer: 'E'},
 ];
+
+export const gemelliDiversi = [
+  {sentence: 'Mattatoio...Gran confusione', answer: 'MACELLO'},
+  {sentence: 'Immagine sacra...Immagine digitale', answer: 'ICONA'},
+  {sentence: 'Comportamento lesivo...Danno', answer: 'OFFESA'},
+];
+
+export const fette = [
+  {sentence: 'Magnati', answer: 'B'},
+  {sentence: 'Cranio', answer: 'U'},
+  {sentence: 'Adorare', answer: 'O'},
+  {sentence: 'Legare', answer: 'N'},
+];
