@@ -18,3 +18,10 @@ export const fette = [
   {sentence: 'Adorare', answer: 'O'},
   {sentence: 'Legare', answer: 'N'},
 ];
+
+export const lettereInComune = [
+  {sentences:['parsa', 'patto', 'muove', 'bacio'], answer:'COM'},
+  {sentences:['biscito', 'bea', 'uro', 'naria'], answer:'PLE'},
+  {sentences:['diamo', 'golo', 'fratto', 'cora'], answer:'AN'},
+  {sentences:['vanta', 'no', 'vita', 'minare'], answer:'NO'}
+]
