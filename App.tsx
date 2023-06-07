@@ -25,15 +25,15 @@ function App(): JSX.Element {
         <StatusBar hidden={true} />
         <NavigationContainer>
           <Stack.Navigator
-            initialRouteName="LettereInComune"
+            initialRouteName="Home"
             screenOptions={{
               header: HeaderProps => (
-                <Header navigation={HeaderProps.navigation} title={'Header'} />
+                <Header navigation={HeaderProps.navigation} />
               ),
               animation: 'none',
             }}>
             <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="LettereInComune" component={LettereInComune} />
+            <Stack.Screen name="Lettere in comune" component={LettereInComune} />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaView>
