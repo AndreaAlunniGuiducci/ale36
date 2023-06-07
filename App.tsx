@@ -15,6 +15,7 @@ import {LettereInComune} from './pages/LettereInComune';
 import {Header} from './components/Header';
 import {mainStyles} from './mainStyles';
 import {PaperProvider} from 'react-native-paper';
+import {menuItem} from './utils/menuItem';
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
@@ -32,8 +33,13 @@ function App(): JSX.Element {
               ),
               animation: 'none',
             }}>
-            <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="Lettere in comune" component={LettereInComune} />
+            {menuItem.map((item, index) => (
+              <Stack.Screen
+                key={index}
+                name={item.title}
+                component={item.component}
+              />
+            ))}
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaView>

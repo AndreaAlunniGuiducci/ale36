@@ -1,6 +1,7 @@
 import {Dimensions, StatusBar, StyleSheet} from 'react-native';
 
 export const windowsHeight = Dimensions.get('screen').height;
+export const headerFontSize = 20;
 
 export const mainStyles = StyleSheet.create({
   mainView: {

@@ -1,20 +1,16 @@
 import {View, Modal, Text} from 'react-native';
 import {styles} from './styles';
-import {useState} from 'react';
 
-export const CustomModal = () => {
-  const [modalVisible, setModalVisible] = useState(true);
+export const CustomModal = ({modalIsVisible, closeModal}: any) => {
   return (
     <Modal
-      visible={modalVisible}
+      visible={modalIsVisible}
       animationType="slide"
-      onRequestClose={() => {
-        setModalVisible(!modalVisible);
-      }}
+      onRequestClose={closeModal}
       transparent={true}>
       <View style={styles.innerModal}>
         <Text>Testo Prova asdsdfagadf ba fgbvadfg argb df</Text>
-        <Text onPress={() => setModalVisible(false)}>Chiudi</Text>
+        <Text onPress={closeModal}>Chiudi</Text>
       </View>
     </Modal>
   );
