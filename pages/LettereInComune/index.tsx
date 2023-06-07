@@ -1,4 +1,4 @@
-import {ScrollView, View} from 'react-native';
+import {ScrollView, Text, View} from 'react-native';
 import {LettereInComuneGame} from '../../components/LettereInComuneGame';
 import {styles} from './styles';
 
@@ -7,9 +7,13 @@ export const LettereInComune = () => {
     <ScrollView>
       <View style={styles.lettereInComune}>
         <LettereInComuneGame />
+        <Text></Text>
         <LettereInComuneGame />
+        <Text></Text>
         <LettereInComuneGame />
+        <Text></Text>
         <LettereInComuneGame />
+        <Text></Text>
       </View>
     </ScrollView>
   );

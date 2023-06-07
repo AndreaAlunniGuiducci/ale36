@@ -23,8 +23,8 @@ export const styles = StyleSheet.create({
   textInput: {
     borderBottomWidth: 1,
   },
-  linesWrapper: {flex: 2, display: 'flex', justifyContent: 'center'},
 
+  linesWrapper: {flex: 2, display: 'flex', justifyContent: 'center'},
   lineOne: {height: 0.5, borderTopWidth: 1},
   lineTwo: {height: 0.5, borderTopWidth: 1},
   lineThree: {height: 0.5, borderTopWidth: 1},

@@ -14,27 +14,30 @@ import {Home} from './pages/Home';
 import {LettereInComune} from './pages/LettereInComune';
 import {Header} from './components/Header';
 import {mainStyles} from './mainStyles';
+import {PaperProvider} from 'react-native-paper';
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
 
   return (
-    <SafeAreaView style={mainStyles.mainView}>
-      <StatusBar hidden={true} />
-      <NavigationContainer>
-        <Stack.Navigator
-          initialRouteName="LettereInComune"
-          screenOptions={{
-            header: HeaderProps => (
-              <Header navigation={HeaderProps.navigation} title={'Header'} />
-            ),
-            animation: 'none',
-          }}>
-          <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="LettereInComune" component={LettereInComune} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaView>
+    <PaperProvider>
+      <SafeAreaView style={mainStyles.mainView}>
+        <StatusBar hidden={true} />
+        <NavigationContainer>
+          <Stack.Navigator
+            initialRouteName="LettereInComune"
+            screenOptions={{
+              header: HeaderProps => (
+                <Header navigation={HeaderProps.navigation} title={'Header'} />
+              ),
+              animation: 'none',
+            }}>
+            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="LettereInComune" component={LettereInComune} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </SafeAreaView>
+    </PaperProvider>
   );
 }
 
