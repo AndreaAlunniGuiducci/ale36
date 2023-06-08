@@ -48,6 +48,7 @@ export const Home = (): JSX.Element => {
             'premi il pulsante "info" in alto magari c\'é un indizio su come aprirlo'
           }
         />
+        
         <Pressable onPress={openPresent}>
           <Image source={require('../../images/PaccoRegaloGrande.png')} />
         </Pressable>

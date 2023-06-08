@@ -43,6 +43,7 @@ export const LettereInComuneGame = ({
             {backgroundColor: bgInputColor},
             answerStyle,
           ]}
+          autoFocus={true}
           autoCapitalize={'characters'}
           value={answer}
           onChangeText={setAnswer}

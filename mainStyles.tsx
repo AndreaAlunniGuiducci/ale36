@@ -1,7 +1,7 @@
 import {Dimensions, StatusBar, StyleSheet} from 'react-native';
 
 export const windowsHeight = Dimensions.get('screen').height;
-export const windowsWidth = Dimensions.get('screen').width
+export const windowsWidth = Dimensions.get('screen').width;
 export const headerFontSize = 20;
 export const solutionTextFontSize = 50;
 export const rigthColor = '#69b00b';
@@ -20,6 +20,5 @@ export const mainStyles = StyleSheet.create({
     backgroundColor: bgColorMain,
     padding: 5,
     height: windowsHeight,
-    marginBottom: StatusBar.currentHeight,
   },
 });
