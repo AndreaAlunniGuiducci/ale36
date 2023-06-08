@@ -3,8 +3,19 @@ import {gemelliDiversi} from '../../utils/game';
 import {SentenceAnswerRow} from '../../components/SentenceAnswerRow';
 import {mainStyles} from '../../mainStyles';
 import {styles} from './styles';
+import {useAppDispatch, useAppSelector} from '../../cusomHooks/reduxHooks';
+import { SolutionReader } from '../../components/SolutionReader';
+import { setSolutionGemelli } from '../../store/slices/gemelliDiversiSlice';
 
 export const GemelliDiversi = () => {
+  const dispatch = useAppDispatch();
+  const solution = useAppSelector(state =>
+    state.gemelliDiversi.solution.join(''),
+  );
+
+  const dispatchSolution = (answer: any, index: number) => {
+    dispatch(setSolutionGemelli({answer: answer[0], index: index}));
+  };
   return (
     <View style={mainStyles.page}>
       {gemelliDiversi.map((item, index) => (
@@ -14,8 +25,11 @@ export const GemelliDiversi = () => {
           key={index}
           sentence={item.sentence}
           rigthAnswer={item.answer}
+          index={index}
+          dispatchSolution={dispatchSolution}
         />
       ))}
+      <SolutionReader solution={solution} />
     </View>
   );
 };
