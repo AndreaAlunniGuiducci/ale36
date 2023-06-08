@@ -2,12 +2,14 @@ import {configureStore} from '@reduxjs/toolkit';
 import nodiDiDireSlice from './slices/nodiDiDireSlice';
 import lettereInComuneSlice from './slices/lettereInComuneSlice';
 import gemelliDiversiSlice from './slices/gemelliDiversiSlice';
+import fetteSlice from './slices/fetteSlice';
 
 export const store = configureStore({
   reducer: {
     nodiDiDIre: nodiDiDireSlice,
     lettereInComune: lettereInComuneSlice,
-    gemelliDiversi: gemelliDiversiSlice
+    gemelliDiversi: gemelliDiversiSlice,
+    fette: fetteSlice,
   },
 });
 
