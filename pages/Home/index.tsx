@@ -16,7 +16,10 @@ export const Home = (): JSX.Element => {
     state.nodiDiDIre.solution.join(''),
   );
 
-  const openPresent = () => {};
+  const openPresent = () => {
+    
+  };
+
   return (
     <View style={mainStyles.page}>
       <View style={styles.imageWrapper}>

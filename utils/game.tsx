@@ -25,3 +25,5 @@ export const lettereInComune = [
   {sentences:['diamo', 'golo', 'fratto', 'cora'], answer:'AN'},
   {sentences:['vanta', 'no', 'vita', 'minare'], answer:'NO'}
 ]
+
+export const finalSolution = 'Buon compleanno amore mio'

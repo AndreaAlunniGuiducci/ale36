@@ -10,7 +10,7 @@ import {setSolutionLettere} from '../../store/slices/lettereInComuneSlice';
 export const LettereInComune = () => {
   const dispatch = useAppDispatch();
   const solution = useAppSelector(state =>
-    state.lettereInComune.solution.join(''),
+    state.lettereInComune.solution,
   );
 
   const dispatchSolution = (answer: any, index: number) => {
@@ -27,9 +27,10 @@ export const LettereInComune = () => {
             dispatchSolution={dispatchSolution}
             index={index}
             rightAnswer={item.answer}
-          />
+            solution={solution}
+            />
         ))}
-        <SolutionReader solution={solution} />
+        <SolutionReader solution={solution.join('')} />
       </View>
     </ScrollView>
   );

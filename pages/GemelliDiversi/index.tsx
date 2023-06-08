@@ -14,7 +14,7 @@ export const GemelliDiversi = () => {
   );
 
   const dispatchSolution = (answer: any, index: number) => {
-    dispatch(setSolutionGemelli({answer: answer[0], index: index}));
+    dispatch(setSolutionGemelli({answer: answer, index: index}));
   };
   return (
     <View style={mainStyles.page}>
@@ -27,6 +27,7 @@ export const GemelliDiversi = () => {
           rigthAnswer={item.answer}
           index={index}
           dispatchSolution={dispatchSolution}
+          solution={solution}
         />
       ))}
       <SolutionReader solution={solution} />

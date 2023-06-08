@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {Text, TextInput, View} from 'react-native';
 import {getRotate, styles} from './styles';
 import {bgColorMain} from '../../mainStyles';
@@ -11,17 +11,29 @@ export const LettereInComuneGame = ({
   answerStyle,
   rightAnswer,
   sentences,
+  solution,
 }: any) => {
   const [wrapperLinesWidth, setWrapperLinesWidth] = useState(0);
   const [answer, setAnswer] = useState('');
   const [bgInputColor, setBgInputColor] = useState(bgColorMain);
 
+  useEffect(() => {
+    if (solution[index]) {
+      setAnswer(solution[index]);
+    }
+  }, []);
+
+  useEffect(() => {
+    setBgInputColor(checkAnswer(answer, rightAnswer));
+    dispatchSolution(answer, index);
+  }, [answer]);
+
   const submitAnswer = (e: any) => {
     e.preventDefault();
     setBgInputColor(checkAnswer(answer, rightAnswer));
     dispatchSolution(answer, index);
-
   };
+
   return (
     <View style={[styles.gameOne, style]}>
       <View style={styles.inputWrapper}>

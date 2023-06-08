@@ -26,6 +26,7 @@ export const Fette = () => {
           rigthAnswer={item.answer}
           index={index}
           dispatchSolution={dispatchSolution}
+          solution={solution}
         />
       ))}
       <SolutionReader solution={solution} />

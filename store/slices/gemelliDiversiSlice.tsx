@@ -16,7 +16,7 @@ const gemelliDiversiSlice = createSlice({
       const index = action.payload.index;
       const answer = action.payload.answer;
       const solutionArray = [...state.solution];
-      solutionArray[index] = answer;
+      solutionArray[index] = answer[0];
       state.solution = solutionArray;
     },
   },
