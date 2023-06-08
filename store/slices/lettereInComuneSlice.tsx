@@ -8,11 +8,11 @@ const initialState: solutionState = {
   solution: [],
 };
 
-const nodiDiDire = createSlice({
+const lettereInComune = createSlice({
   name: 'gameSolution',
   initialState,
   reducers: {
-    setSolutionNodi(state, action: PayloadAction<any>) {
+    setSolutionLettere(state, action: PayloadAction<any>) {
       const index = action.payload.index;
       const answer = action.payload.answer;
       const solutionArray = [...state.solution];
@@ -22,5 +22,5 @@ const nodiDiDire = createSlice({
   },
 });
 
-export default nodiDiDire.reducer;
-export const {setSolutionNodi} = nodiDiDire.actions;
+export default lettereInComune.reducer;
+export const {setSolutionLettere} = lettereInComune.actions;

@@ -6,6 +6,8 @@ import {checkAnswer} from '../../utils/checkAnswer';
 
 export const LettereInComuneGame = ({
   style,
+  index,
+  dispatchSolution,
   answerStyle,
   rightAnswer,
   sentences,
@@ -17,6 +19,8 @@ export const LettereInComuneGame = ({
   const submitAnswer = (e: any) => {
     e.preventDefault();
     setBgInputColor(checkAnswer(answer, rightAnswer));
+    dispatchSolution(answer, index);
+
   };
   return (
     <View style={[styles.gameOne, style]}>
