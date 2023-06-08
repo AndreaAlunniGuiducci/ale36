@@ -1,11 +1,13 @@
 import {useState} from 'react';
 import {Text, TextInput, View} from 'react-native';
 import {styles} from './styles';
-import {bgColorMain, rigthColor, wrongColor} from '../../mainStyles';
+import {bgColorMain} from '../../mainStyles';
 import {checkAnswer} from '../../utils/checkAnswer';
 
 export const SentenceAnswerRow = ({
   style,
+  index,
+  dispatchSolution,
   sentenceStyle,
   sentence,
   answerStyle,
@@ -17,7 +19,9 @@ export const SentenceAnswerRow = ({
   const submitAnswer = (e: any) => {
     e.preventDefault();
     setBgInputColor(checkAnswer(answer, rigthAnswer));
+    dispatchSolution(answer, index);
   };
+
   return (
     <View style={[styles.row, style]}>
       <View style={[styles.sentence, sentenceStyle]}>

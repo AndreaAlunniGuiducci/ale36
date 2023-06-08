@@ -3,9 +3,9 @@ import {LettereInComuneGame} from '../../components/LettereInComuneGame';
 import {mainStyles} from '../../mainStyles';
 import {lettereInComune} from '../../utils/game';
 import {styles} from './styles';
+import { SolutionReader } from '../../components/SolutionReader';
 
 export const LettereInComune = () => {
-  
   return (
     <ScrollView>
       <View style={mainStyles.page}>
@@ -17,6 +17,7 @@ export const LettereInComune = () => {
             rightAnswer={item.answer}
           />
         ))}
+        <SolutionReader solution={'qwe'}/>
       </View>
     </ScrollView>
   );

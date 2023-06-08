@@ -4,7 +4,8 @@ import { mainStyles } from '../../mainStyles';
 export const Home = (): JSX.Element => {
   return (
     <View style={mainStyles.page}>
-      <Text>Home Component</Text>
+      
+
     </View>
   );
 };
