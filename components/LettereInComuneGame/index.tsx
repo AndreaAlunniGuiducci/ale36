@@ -1,8 +1,8 @@
 import {useState} from 'react';
 import {Text, TextInput, View} from 'react-native';
 import {getRotate, styles} from './styles';
-import { bgColorMain } from '../../mainStyles';
-import { checkAnswer } from '../../utils/checkAnswer';
+import {bgColorMain} from '../../mainStyles';
+import {checkAnswer} from '../../utils/checkAnswer';
 
 export const LettereInComuneGame = ({
   style,
@@ -27,8 +27,8 @@ export const LettereInComuneGame = ({
             {backgroundColor: bgInputColor},
             answerStyle,
           ]}
-          value={answer.toUpperCase()}
-          // maxLength={1}
+          autoCapitalize={'characters'}
+          value={answer}
           onChangeText={setAnswer}
           onSubmitEditing={submitAnswer}
         />

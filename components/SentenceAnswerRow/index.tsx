@@ -24,9 +24,9 @@ export const SentenceAnswerRow = ({
         <Text>{sentence}</Text>
       </View>
       <TextInput
+        autoCapitalize={'characters'}
         style={[styles.answer, {backgroundColor: bgInputColor}, answerStyle]}
-        value={answer.toUpperCase()}
-        // maxLength={1}
+        value={answer}
         onChangeText={setAnswer}
         onSubmitEditing={submitAnswer}
       />

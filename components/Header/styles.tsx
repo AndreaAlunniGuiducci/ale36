@@ -1,12 +1,13 @@
 import {StyleSheet} from 'react-native';
-import {headerFontSize} from '../../mainStyles';
+import {bgColorHeader, headerFontSize} from '../../mainStyles';
 
 export const styles = StyleSheet.create({
   header: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: '#ffff',
+    backgroundColor: bgColorHeader,
+    paddingBottom: 5
   },
   headerTitle: {
     fontSize: headerFontSize,
