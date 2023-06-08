@@ -8,7 +8,9 @@ export const menuItem = [
     title: 'Home',
     component: Home,
     description:
-      'Partecipa ai quattro giochi e scopri la password per ricevere il tuo regalo',
+      'Se vuoi aprire il regalo ti servono quattro chiavi, \n' +
+      'per ottenerle dovrai risolvere i quattro giochi che trovi nel menu. \n' +
+      'Nella pagina di ogni gioco premi ancora il pulsante "info" per conoscere come funziona',
   },
   {
     title: 'Lettere in comune',

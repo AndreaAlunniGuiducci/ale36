@@ -17,4 +17,7 @@ export const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
   },
+  textModal:{
+    fontSize: 16
+  }
 });

@@ -6,7 +6,8 @@ export const styles = StyleSheet.create({
         marginVertical: 10,
         borderWidth: 1,
         borderRadius: 20,
-        paddingBottom: 5
+        paddingBottom: 5,
+        paddingHorizontal: 5
       },
       solutionText: {
         textAlign: 'center',
