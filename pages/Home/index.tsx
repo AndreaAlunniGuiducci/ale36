@@ -1,14 +1,15 @@
-import {View, Image, Pressable, Alert, Text} from 'react-native';
+import {View, Image, Pressable, Alert, Text, Animated} from 'react-native';
 import {mainStyles} from '../../mainStyles';
 import {styles} from './styles';
 import {useAppSelector} from '../../cusomHooks/reduxHooks';
 import {SolutionReader} from '../../components/SolutionReader';
 import {finalSolution} from '../../utils/game';
 import {CustomModal} from '../../components/Modal';
-import {useState} from 'react';
+import {useRef, useState} from 'react';
 
 export const Home = (): JSX.Element => {
   const [GiftModalIsOpen, setGiftModalIsOpen] = useState(false);
+  const [isGiftVisible, setIsGiftVisible] = useState(false);
   const openGiftModal = () => setGiftModalIsOpen(true);
   const closeGiftModal = () => setGiftModalIsOpen(false);
 
@@ -31,12 +32,21 @@ export const Home = (): JSX.Element => {
       finalSolutionArr[2].toUpperCase() === nodiSolution.toUpperCase() &&
       finalSolutionArr[3].toUpperCase() === gemelliSolution.toUpperCase()
     ) {
-      console.log('ok');
+      openGift();
+      setIsGiftVisible(true);
     } else {
       openGiftModal();
     }
   };
 
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+  const openGift = () => {
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 5000,
+      useNativeDriver: true,
+    }).start();
+  };
   return (
     <View style={mainStyles.page}>
       <View style={styles.imageWrapper}>
@@ -50,9 +60,21 @@ export const Home = (): JSX.Element => {
         />
         <Text style={styles.homeText}>Tanti auguri per questi 36 anni,</Text>
         <Text style={styles.homeText}>ecco un bel regalo per te</Text>
-        <Pressable onPress={openPresent}>
+        <Pressable
+          style={{display: isGiftVisible ? 'none' : 'flex'}}
+          onPress={openPresent}>
           <Image source={require('../../images/PaccoRegaloGrande.png')} />
         </Pressable>
+        <Animated.View
+          style={[
+            styles.gift,
+            {
+              opacity: fadeAnim,
+              display: isGiftVisible ? 'flex' : 'none',
+            },
+          ]}>
+          <Image source={require('../../images/gift.png')} />
+        </Animated.View>
       </View>
       <View style={styles.finalSolution}>
         <SolutionReader

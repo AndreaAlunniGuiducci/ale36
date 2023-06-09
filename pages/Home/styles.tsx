@@ -9,6 +9,9 @@ export const styles = StyleSheet.create({
   imageWrapper: {
     marginHorizontal: windowsWidth / 10,
   },
+  gift:{
+    
+  },
   finalSolution: {
     flexDirection: 'row',
     justifyContent: 'center',
