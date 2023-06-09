@@ -18,6 +18,7 @@ export const styles = StyleSheet.create({
     elevation: 5,
   },
   textModal:{
-    fontSize: 16
+    fontSize: 16,
+    textAlign: 'center'
   }
 });

@@ -1,4 +1,4 @@
-import {View, Image, Pressable, Alert} from 'react-native';
+import {View, Image, Pressable, Alert, Text} from 'react-native';
 import {mainStyles} from '../../mainStyles';
 import {styles} from './styles';
 import {useAppSelector} from '../../cusomHooks/reduxHooks';
@@ -48,7 +48,8 @@ export const Home = (): JSX.Element => {
             'premi il pulsante "info" in alto magari c\'é un indizio su come aprirlo'
           }
         />
-        
+        <Text style={styles.homeText}>Tanti auguri per questi 36 anni,</Text>
+        <Text style={styles.homeText}>ecco un bel regalo per te</Text>
         <Pressable onPress={openPresent}>
           <Image source={require('../../images/PaccoRegaloGrande.png')} />
         </Pressable>

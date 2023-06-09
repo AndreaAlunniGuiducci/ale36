@@ -3,7 +3,7 @@ import { solutionTextFontSize } from "../../mainStyles";
 
 export const styles = StyleSheet.create({
     solutionWrapper: {
-        marginVertical: 10,
+        margin: 5,
         borderWidth: 1,
         borderRadius: 20,
         paddingBottom: 5,

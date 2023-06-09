@@ -7,7 +7,9 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: bgColorHeader,
-    padding: 5
+    padding: 15,
+    borderBottomStartRadius: 25,
+    borderBottomEndRadius: 25,
   },
   headerTitle: {
     fontSize: headerFontSize,
