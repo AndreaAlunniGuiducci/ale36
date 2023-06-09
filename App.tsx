@@ -15,7 +15,7 @@ import {mainStyles} from './mainStyles';
 import {PaperProvider} from 'react-native-paper';
 import {menuItem} from './utils/menuItem';
 import {Provider} from 'react-redux';
-import { store } from './store/store';
+import {store} from './store/store';
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
@@ -23,8 +23,8 @@ function App(): JSX.Element {
   return (
     <Provider store={store}>
       <PaperProvider>
+        <StatusBar hidden={true} />
         <SafeAreaView style={mainStyles.mainView}>
-          <StatusBar hidden={true} />
           <NavigationContainer>
             <Stack.Navigator
               initialRouteName="Home"
