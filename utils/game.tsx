@@ -9,7 +9,7 @@ export const nodiDiDire = [
 export const gemelliDiversi = [
   {sentence: 'Mattatoio...Gran confusione', answer: 'MACELLO'},
   {sentence: 'Immagine sacra...Immagine digitale', answer: 'ICONA'},
-  {sentence: 'Comportamento lesivo...Danno', answer: 'OFFESA'},
+  {sentence: 'angolo chiuso...Persona poco intelligente', answer: 'OTTUSO'},
 ];
 
 export const fette = [
